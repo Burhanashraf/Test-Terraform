@@ -1,25 +1,25 @@
 name: CI-CD
 on:
   #this workflow_dispatch is for manually running of your pipeline user needs to run this pipeline which will be delivery
-   workflow_dispatch:
+  workflow_dispatch:
 jobs:
   Clone:
     runs-on: ubuntu-latest
     steps:
        - name: clone the code
          run: echo "code cloned"
-   Build:
+  Build:
      runs-on: ubuntu-latest
      steps:
        - name: run docker version
          run: docker --version
-   Test:
+  Test:
       runs-on: ubuntu-latest
       steps:
         - name: check if tf is installed
           run: terraform --version
-   Deploy:
+  Deploy:
       runs-on: ubuntu-latest
       steps:
         - name: Done
-          steps: echo "completed"
+          run: echo "completed"
