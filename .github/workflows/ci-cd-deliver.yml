@@ -1,7 +1,7 @@
 name: CI-CD
 on:
   #this workflow_dispatch is for manually running of your pipeline user needs to run this pipeline which will be delivery
-   workflow-dispatch:
+   workflow_dispatch:
 jobs:
   Clone:
     runs-on: ubuntu-latest
