@@ -20,7 +20,10 @@ jobs:
       runs-on: ubuntu-latest
       steps:
         - name: check if tf is installed
-          run: terraform --version
+          run: 
+           sudo apt update
+           sudo apt install -y terraform
+           terraform --version
   Deploy:
       needs: [Clone,Test]
       runs-on: ubuntu-latest
