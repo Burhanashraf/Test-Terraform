@@ -4,8 +4,7 @@ name: hello workflow
 
 #this workflow will run if there is any push on the main branch and will run jobs .
 on:
- push:
-   branches: [main]
+ workflow_dispatch: 
 #this is the job
 jobs:
 #these jobs run on runners and github actions gives you runners to run jobs .
