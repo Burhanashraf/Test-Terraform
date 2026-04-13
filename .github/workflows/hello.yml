@@ -8,9 +8,8 @@ on:
 #so we are giving paths .
 #BSince this is manual delivery in ci-cd path one doesnt support in manual but for automatic deployment it supports path.
 #Which needs to be done in this way.
- push:
-   paths:
-      - '**.yml'
+ workflow_dispatch:
+   
 #this is the job
 jobs:
 #these jobs run on runners and github actions gives you runners to run jobs .
