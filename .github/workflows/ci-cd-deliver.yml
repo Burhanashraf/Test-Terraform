@@ -9,16 +9,20 @@ jobs:
        - name: clone the code
          run: echo "code cloned"
   Build:
+     needs: [Clone]
      runs-on: ubuntu-latest
      steps:
        - name: run docker version
          run: docker --version
+        
   Test:
+      needs: [Clone]
       runs-on: ubuntu-latest
       steps:
         - name: check if tf is installed
           run: terraform --version
   Deploy:
+      needs: [Clone,Test]
       runs-on: ubuntu-latest
       steps:
         - name: Done
