@@ -35,9 +35,13 @@ jobs:
            sudo apt update
            sudo apt install -y terraform
            terraform --version
+
+# here in deploy we have added env as dev so while running this pipeline manually if anyone chooses env other than dev , so it wont deploy.
+#It will run upto test but since we have added env in deploy if will not deploy anything if u choose other than dev
   Deploy:
-      needs: [Build,Test]
-      runs-on: ubuntu-latest
-      steps:
-        - name: Done
-          run: echo "completed"
+    if: inputs.environment == 'dev'
+    needs: [Build,Test]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Done
+        run: echo "completed"
