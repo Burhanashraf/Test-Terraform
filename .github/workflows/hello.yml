@@ -4,7 +4,13 @@ name: hello workflow
 
 #this workflow will run if there is any push on the main branch and will run jobs .
 on:
- workflow_dispatch: 
+#we are giving path defined here bcux whats happening is even if we change a readme file the pipe line automatically runs.
+#so we are giving paths .
+#BSince this is manual delivery in ci-cd path one doesnt support in manual but for automatic deployment it supports path.
+#Which needs to be done in this way.
+ push:
+   paths:
+      - '**.yml'
 #this is the job
 jobs:
 #these jobs run on runners and github actions gives you runners to run jobs .
