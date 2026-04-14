@@ -1,4 +1,4 @@
-name: python lint
+name: Python lint
 
 on:
  workflow_dispatch: 
@@ -6,6 +6,7 @@ on:
 jobs:
  validate:
     runs-on: ubuntu-latest
+   
     steps:
       - name: checckout code
         uses: actions/checkout@v4
