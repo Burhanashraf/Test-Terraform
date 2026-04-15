@@ -23,7 +23,7 @@ jobs:
       - name: setup python ${{ matrix.python-version}}
         uses: actions/setup-python@v5
         with:
-          python-versions: ${{ matrix.python-version}}
+          python-version: ${{ matrix.python-version}}
 
       #Here we are only able to use one version of pythom
       
