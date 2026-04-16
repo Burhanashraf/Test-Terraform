@@ -16,12 +16,11 @@ jobs:
           password: ${{ secrets.DOCKER_SECRET }}
 
       - name: Docker build and push to docker hub
-        uses: docker/build-push-actions@v6
+        uses: docker/build-push-action@v6
         with:
           context: .
           push: true
           tags:
                ${{ vars.DOCKERHUB_USER }}/github-actions-app:${{ github.ref_name }}
                ${{ vars.DOCKERHUB_USER }}/github-actions-app:latest
-               ${{ vars.DOCKERHUB_USER }}/github-actions-app:${{ github.sha}}
-         
+               ${{ vars.DOCKERHUB_USER }}/github-actions-app:${{ github.sha }}
