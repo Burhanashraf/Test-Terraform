@@ -10,5 +10,5 @@ def hello_world():
 def health():
     return 'Server is up and running'
 
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000)
+# 🔥 THIS IS REQUIRED
+app.run(host="0.0.0.0", port=5000)
