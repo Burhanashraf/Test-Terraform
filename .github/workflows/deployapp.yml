@@ -6,7 +6,7 @@ jobs:
 
     deploy:
         env:
-            DOCKERHUB_USER: ${{ vars.DOCKER_USERNAME }}
+            DOCKER_USER: ${{ vars.DOCKER_USERNAME }}
             DOCKER_TAG: latest
             
         runs-on: self-hosted
