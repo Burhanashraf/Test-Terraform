@@ -2,10 +2,8 @@ FROM python:3.13
 
 WORKDIR /app
 
-COPY . /app
+COPY . .
 
-RUN pip install flask
-
-EXPOSE 5000
+RUN pip install -r requirements.txt
 
 CMD ["python", "app.py"]
